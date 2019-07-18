@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+@mainColor:#e92323;
+@className:box;
+@size:12px;
+@width:100px;
+@height:100px;
+a:hover{
+	background: @mainColor;
+}
+.@{className}{
+	color:@mainColor;
+	font-size: @size;
+	width:@width;
+	height:@height;
+}
+/*类混入*/
+/*.f_left{
+	float:left;
+}
+.w50 {
+	width:50%;
+}
+
+.w50-f_left {
+	.w50();
+	.f_left();
+}*/
+/*函数混入*/
+/*.w50(){
+	width:50%;
+}
+.f_left(){
+	float:left;
+}
+.f_right(){
+	float:right;
+}
+/*调用*/
+/*.w50-f_left{
+	.w50();
+	.f_left();
+}*/
+
+/*传参数函数*/
+/*声明函数*/
+.w50(){
+	width:50%;
+}
+/*参数默认：*/
+.f(@direcation:left){
+	float:@direcation;
+}
+/*调用*/
+
+.w50-f_left{
+	.w50();
+	.f(right);
+}
